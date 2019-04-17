@@ -1,4 +1,4 @@
-<#include "/default/inc/layout.ftl"/>
+<#include "/${theme}/inc/layout.ftl"/>
 
 <@layout "消息提示">
 

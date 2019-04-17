@@ -12,7 +12,9 @@ package com.mtons.mblog.web.exceptions;
 import com.alibaba.fastjson.JSON;
 import com.mtons.mblog.base.lang.Result;
 import com.mtons.mblog.base.lang.MtonsException;
+import com.mtons.mblog.config.SiteOptions;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -34,6 +36,9 @@ import java.util.Map;
 @Slf4j
 @Component
 public class DefaultExceptionHandler implements HandlerExceptionResolver {
+	@Autowired
+	protected SiteOptions siteOptions;
+
 	private static final String errorView = "/error";
 	
 	@Override
@@ -62,6 +67,7 @@ public class DefaultExceptionHandler implements HandlerExceptionResolver {
 			Map<String, Object> map = new HashMap<String, Object>();  
 			map.put("error", ret);
 	        map.put("base", request.getContextPath());
+	        map.put("theme", siteOptions.getValue("theme"));
 			view = new ModelAndView(errorView, map);
 		}
 		return view;
