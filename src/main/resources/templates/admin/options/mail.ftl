@@ -2,7 +2,7 @@
     <div class="form-group">
         <label class="col-sm-2 control-label">SMTP地址</label>
         <div class="col-sm-6">
-            <input type="text" name="mail_smtp_host" class="form-control" value="${options['mail_smtp_host']}" placeholder="smtp.mtons.com">
+            <input type="text" name="mail_smtp_host" class="form-control" value="${options['mail_smtp_host']}" placeholder="smtp.appcnd.com">
         </div>
     </div>
     <div class="form-group">

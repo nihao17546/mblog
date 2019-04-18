@@ -96,7 +96,7 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">域名绑定</label>
             <div class="col-sm-6">
-                <input type="text" name="qiniu_oss_domain" class="form-control" value="${options['qiniu_oss_domain']}" placeholder="示例: http://qiniu.mtons.com">
+                <input type="text" name="qiniu_oss_domain" class="form-control" value="${options['qiniu_oss_domain']}" placeholder="示例: http://qiniu.appcnd.com">
             </div>
         </div>
         <div class="form-group">
