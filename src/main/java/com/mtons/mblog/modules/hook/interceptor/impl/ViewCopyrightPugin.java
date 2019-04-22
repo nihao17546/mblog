@@ -33,7 +33,7 @@ public class ViewCopyrightPugin extends InterceptorHookSupport {
         Object editing = modelAndView.getModel().get("editing");
         if (null == editing && ret != null) {
             String content = ret.getContent();
-            if (!content.contains("本文归作者所有，未经作者允许，不得转载")) {
+            if (!content.contains("本文归作者所有，转载请标明出处 http://blog.appcnd.com")) {
                 content += "<br/><p class=\"copyright\">注意：本文归作者所有，转载请标明出处 http://blog.appcnd.com" +
                         request.getRequestURI() +
                         (request.getQueryString() == null ? "" : request.getQueryString()) +
